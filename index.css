@@ -60,12 +60,16 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100vw;
+    max-width: 500px;
+    /* overflow: hidden; */
 }
 
 button{
     border: none;
     font-size: 1.5rem;
     margin: 3px;
+    padding: 3px;
     cursor: pointer;
     border-radius: 5px;
     background-color:rgb(125, 127, 128);
@@ -75,9 +79,21 @@ button{
     transition: background-color 0.3s ease-in-out;
 }
 
+@media only screen and (max-width: 400px){
+    button{
+        font-size: 1rem;
+        height: 40px;
+    }
+
+    .backspace, .enter {
+        font-size: 1rem !important;
+    }
+}
+
 button.vowel{
     direction: ltr !important;
-    padding: 15px;
+    /* padding: 15px; */
+    padding-right: 4.5%;
 }
 
 button:hover{
@@ -90,8 +106,10 @@ button:hover{
 }
 
 .backspace, .enter {
-    width: 100px;
-    font-size: 20px;
+    width: 15%;
+    min-width: 50px;
+    max-width: 75px;
+    font-size: 1.2rem;
 }
 
 .row{
@@ -100,7 +118,6 @@ button:hover{
     align-items: center;
     flex-grow: 1;
     width: 100%;
-    max-width: 600px;
 }
 
 .bas {
